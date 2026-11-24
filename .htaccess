@@ -1,0 +1,9 @@
+# Apache (WAMP / cPanel hosting): keep private files private
+DirectoryIndex index.html index.php
+Options -Indexes
+<FilesMatch "^(database\.sql|router\.php|config\.local\.php)$">
+  Require all denied
+</FilesMatch>
+<FilesMatch "^(layout|auth|config)\.php$">
+  Require all denied
+</FilesMatch>

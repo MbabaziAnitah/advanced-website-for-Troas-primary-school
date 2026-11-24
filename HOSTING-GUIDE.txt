@@ -1,0 +1,28 @@
+TROAS PRIMARY SCHOOL - HOSTING GUIDE (cPanel / shared hosting)
+==============================================================
+Requirements: PHP 7.4 or newer (8.x is fine) with the pdo_sqlite extension
+(enabled by default on almost all hosts). No MySQL needed.
+
+1. Log in to your hosting cPanel > File Manager > open public_html
+   (or the folder of your domain / subfolder, e.g. public_html/troas).
+2. Upload Troas_Primary_School_READY_TO_HOST.zip there and click Extract.
+   The files (index.html, about.html, admin/, assets/ ...) must sit directly
+   in that folder, not inside another folder.
+3. Make sure these two folders are writable (File Manager > Permissions 755,
+   or 775 if uploads fail):   data/    and    assets/uploads/
+4. Visit your domain (index.html opens). The database is created automatically on the first visit.
+5. Visit  yourdomain/admin/login.php   Login: admin / TroasAdmin2026!
+   You will be forced to choose your own password straight away.
+6. In the cPanel of your host turn on the free SSL certificate (AutoSSL /
+   Let's Encrypt) so the site and login use https://.
+
+AFTER GOING LIVE
+- Homepage slider, pictures, inboxes, users: cPanel menu on the left.
+- Back up regularly: System & backup > Download database backup, and download
+  the assets/uploads folder.
+- Update before publishing: official fees, address, phone, email, staff names,
+  and the Facebook/Instagram links in the footer.
+- The homepage slider updates live from the cPanel when your host runs PHP.
+- News, Gallery, Staff and Fees pages still show their original content; only the
+  slider, the forms/inboxes and the cPanel are database-driven.
+- Never delete data/ or its .htaccess file: it protects your database.
