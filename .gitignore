@@ -1,0 +1,21 @@
+# Local configuration and secrets
+admin/config.local.php
+.env
+
+# Databases created on the server (keep data/.htaccess tracked)
+data/*.sqlite
+data/*.sqlite3
+data/*.db
+*.sqlite
+*.sqlite3
+
+# Backups and archives
+*.bak
+*.zip
+*.log
+
+# Editor and OS files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
